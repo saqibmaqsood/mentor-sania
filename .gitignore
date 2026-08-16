@@ -2,3 +2,5 @@
 .thumbnail
 Thumbs.db
 *.log
+*.mov
+*.mp4

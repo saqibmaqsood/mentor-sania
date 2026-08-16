@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<style>x-dc{display:none!important}.sc-placeholder{display:none!important}</style>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
