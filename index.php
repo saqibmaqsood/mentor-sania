@@ -89,23 +89,25 @@
       box-sizing: border-box !important;
       padding: 10px 14px !important;
     }
-    .platforms-mobile-scroll {
+    .platforms-cloud {
       display: flex !important;
       flex-wrap: wrap !important;
       justify-content: center !important;
       align-items: center !important;
-      gap: 8px !important;
-      margin-bottom: 8px !important;
+      gap: 8px 8px !important;
     }
-    .platforms-mobile-scroll > div {
+    .platforms-cloud > div {
       flex: 0 0 auto !important;
-      height: 38px !important;
-      padding: 4px 10px !important;
-      border-radius: 8px !important;
+      height: 40px !important;
+      padding: 4px 12px !important;
+      border-radius: 10px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
     }
-    .platforms-mobile-scroll > div img {
-      height: 18px !important;
-      max-width: 75px !important;
+    .platforms-cloud > div img {
+      height: 20px !important;
+      max-width: 80px !important;
     }
     .timeline-wrapper {
       margin-top: 36px !important;
@@ -228,8 +230,8 @@
       <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A5A34">Platforms & Tools Covered</span>
       <h2 data-reveal="" style="margin:10px 0 28px;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(22px,2.6vw,32px);line-height:1.15;color:#1E1B17">Master 30+ industry-standard platforms & applications.</h2>
       
-      <!-- ROW 1 (16 LOGOS) -->
-      <div class="platforms-mobile-scroll om-scroller" data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px;margin-bottom:16px">
+      <!-- ALL 31 LOGOS IN SINGLE UNIFIED CLOUD -->
+      <div class="platforms-cloud" data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px">
         <div title="Pinterest" style="border:1px solid #D9CDB6;background:#FAF7F2;padding:8px 18px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;height:52px;transition:all 200ms ease;box-shadow:0 2px 6px rgba(30,27,23,0.03)" style-hover="border-color:#B5794A;box-shadow:0 6px 16px rgba(30,27,23,0.08)">
           <img src="Media/logos/pinterest.png" alt="Pinterest" style="height:28px;width:auto;max-width:140px;object-fit:contain;display:block" />
         </div>
@@ -278,10 +280,6 @@
         <div title="Canva" style="border:1px solid #D9CDB6;background:#FAF7F2;padding:8px 18px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;height:52px;transition:all 200ms ease;box-shadow:0 2px 6px rgba(30,27,23,0.03)" style-hover="border-color:#B5794A;box-shadow:0 6px 16px rgba(30,27,23,0.08)">
           <img src="Media/logos/canva.png" alt="Canva" style="height:28px;width:auto;max-width:140px;object-fit:contain;display:block" />
         </div>
-      </div>
-
-      <!-- ROW 2 (15 LOGOS) -->
-      <div class="platforms-mobile-scroll om-scroller" data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px">
         <div title="Claude" style="border:1px solid #D9CDB6;background:#FAF7F2;padding:8px 18px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;height:52px;transition:all 200ms ease;box-shadow:0 2px 6px rgba(30,27,23,0.03)" style-hover="border-color:#B5794A;box-shadow:0 6px 16px rgba(30,27,23,0.08)">
           <img src="Media/logos/claude.png" alt="Claude" style="height:28px;width:auto;max-width:140px;object-fit:contain;display:block" />
         </div>
