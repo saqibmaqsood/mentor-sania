@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /
+
+# Clean URL for course detail: /courses/slug -> course-detail.php?c=slug
+RewriteRule ^courses/([a-zA-Z0-9_-]+)/?$ course-detail.php?c=$1 [L,QSA]
+
+# Clean URL for resource detail: /resources/slug -> resource-detail.php?r=slug
+RewriteRule ^resources/([a-zA-Z0-9_-]+)/?$ resource-detail.php?r=$1 [L,QSA]
+
+# Clean URL for services: /services -> services.php
+RewriteRule ^services/?$ services.php [L,QSA]
+
+# Clean URL for panel: /panel -> panel/index.php
+RewriteRule ^panel/?$ panel/index.php [L,QSA]
