@@ -6,26 +6,23 @@ RewriteBase /
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
 RewriteRule ^index\.php$ / [R=301,L]
 
-# 2. 301 Redirect direct *.php requests to clean extensionless URLs (excluding panel & mail-handler)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+)\.php(\?[^\ ]*)?\ HTTP/
-RewriteCond %{REQUEST_URI} !^/panel
-RewriteCond %{REQUEST_URI} !^/mail-handler\.php
-RewriteRule ^([^/]+)\.php$ /$1 [R=301,L,QSA]
+# 2. 301 Redirect direct *.php to clean URL (only on external browser request)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(about|courses|services|consulting|contact|faq|legal|resources)\.php [NC]
+RewriteRule ^(about|courses|services|consulting|contact|faq|legal|resources)\.php$ /$1 [R=301,L]
 
-# 3. Clean dynamic routing for Course and Resource detail pages
+# 3. Dynamic course & resource detail routes
 RewriteRule ^courses/([a-zA-Z0-9_-]+)/?$ course-detail.php?c=$1 [L,QSA]
 RewriteRule ^resources/([a-zA-Z0-9_-]+)/?$ resource-detail.php?r=$1 [L,QSA]
 
-# 4. Clean routing for admin panel
+# 4. Admin panel
 RewriteRule ^panel/?$ panel/index.php [L,QSA]
 
-# 5. Extensionless PHP routing for all pages (e.g. /about -> about.php)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{DOCUMENT_ROOT}/$1.php -f
-RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
+# 5. Explicit Clean Page Routes
+RewriteRule ^about/?$ about.php [L,QSA]
+RewriteRule ^courses/?$ courses.php [L,QSA]
+RewriteRule ^services/?$ services.php [L,QSA]
+RewriteRule ^consulting/?$ consulting.php [L,QSA]
+RewriteRule ^contact/?$ contact.php [L,QSA]
+RewriteRule ^faq/?$ faq.php [L,QSA]
+RewriteRule ^legal/?$ legal.php [L,QSA]
+RewriteRule ^resources/?$ resources.php [L,QSA]

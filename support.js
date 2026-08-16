@@ -153,13 +153,6 @@
     runtime.markFetched(rootName);
     runtime.setRootName(rootName);
     runtime.adoptParsed(rootName, parsed);
-    if (!window.__resources) {
-      fetch(location.href).then((res) => res.ok ? res.text() : "").then((t) => {
-        const raw = t ? parseDcText(t) : null;
-        if (raw?.template) runtime.updateHtml(rootName, raw.template);
-      }).catch(() => {
-      });
-    }
     const dc = doc.querySelector("x-dc");
     const hostEl = doc.createElement("div");
     hostEl.id = "dc-root";
