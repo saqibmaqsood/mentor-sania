@@ -1,3 +1,4 @@
+Options -MultiViews +FollowSymLinks
 RewriteEngine On
 RewriteBase /
 
@@ -7,7 +8,7 @@ RewriteRule ^index\.php$ / [R=301,L]
 
 # 2. 301 Redirect direct *.php requests to clean extensionless URLs (excluding panel & mail-handler)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+)\.php(\?[^\ ]*)?\ HTTP/
-RewriteCond %{REQUEST_URI} !^/panel/
+RewriteCond %{REQUEST_URI} !^/panel
 RewriteCond %{REQUEST_URI} !^/mail-handler\.php
 RewriteRule ^([^/]+)\.php$ /$1 [R=301,L,QSA]
 
@@ -20,5 +21,11 @@ RewriteRule ^panel/?$ panel/index.php [L,QSA]
 
 # 5. Extensionless PHP routing for all pages (e.g. /about -> about.php)
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^([^\.]+)$ $1.php [NC,L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]

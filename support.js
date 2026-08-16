@@ -78,7 +78,8 @@
       p = decodeURIComponent(p);
     } catch {
     }
-    const base = p.split("/").pop() || "Root";
+    const parts = p.split("/").filter(Boolean);
+    const base = parts.pop() || "Root";
     return base.replace(/\.dc\.html$/, "").replace(/\.html?$/, "").replace(/\.php$/, "") || "Root";
   }
 
@@ -131,14 +132,11 @@
   `;
   var FULL_PAGE_CSS = "html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}";
   function rootNameForDocument(doc, loc) {
-    let bootPath = loc.pathname || "";
-    if (!/\.(dc\.html?|php)$/i.test(safeDecode(bootPath))) {
-      try {
-        bootPath = new URL(doc.baseURI || "/").pathname;
-      } catch {
-      }
+    const raw = (loc.pathname || "").split("/").filter(Boolean).pop();
+    if (raw && raw !== "index" && raw !== "index.php" && raw !== "index.html") {
+      return dcNameFromPath(loc.pathname);
     }
-    return dcNameFromPath(bootPath);
+    return "Root";
   }
   function safeDecode(s) {
     try {
