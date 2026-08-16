@@ -32,34 +32,52 @@
      ========================================================================== */
   @media (max-width: 768px) {
     section[data-screen-label="Hero"] {
-      padding-top: 96px !important;
-      padding-bottom: 40px !important;
+      padding-top: 90px !important;
+      padding-bottom: 32px !important;
     }
     .hero-btn-group {
       display: flex !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 12px !important;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      gap: 10px !important;
+      margin-top: 22px !important;
     }
-    .hero-btn-group a {
+    .hero-btn-group a.btn-primary {
+      flex: 1 1 auto !important;
       text-align: center !important;
       justify-content: center !important;
-      width: 100% !important;
+      padding: 13px 18px !important;
+      font-size: 14px !important;
       box-sizing: border-box !important;
+      white-space: nowrap !important;
+    }
+    .hero-btn-group a.btn-secondary {
+      flex: 1 1 auto !important;
+      text-align: center !important;
+      justify-content: center !important;
+      padding: 13px 16px !important;
+      font-size: 14px !important;
+      border: 1px solid #C9BCA6 !important;
+      border-radius: 999px !important;
+      box-sizing: border-box !important;
+      white-space: nowrap !important;
     }
     .hero-stats-grid {
       grid-template-columns: repeat(3, 1fr) !important;
-      gap: 12px 8px !important;
+      gap: 10px 6px !important;
       text-align: center !important;
+      margin-top: 22px !important;
+      padding-top: 18px !important;
     }
     .hero-stats-grid div {
       min-width: 0 !important;
     }
     .hero-stats-grid .stat-num {
-      font-size: clamp(22px, 5.5vw, 30px) !important;
+      font-size: clamp(22px, 5.5vw, 28px) !important;
     }
     .hero-stats-grid .stat-label {
-      font-size: 10.5px !important;
+      font-size: 10px !important;
       letter-spacing: 0.04em !important;
     }
     .hero-floating-card {
@@ -73,24 +91,21 @@
     }
     .platforms-mobile-scroll {
       display: flex !important;
-      flex-wrap: nowrap !important;
-      overflow-x: auto !important;
-      -webkit-overflow-scrolling: touch !important;
-      gap: 10px !important;
-      padding: 4px 0 12px !important;
-      scrollbar-width: none !important;
-      justify-content: flex-start !important;
-    }
-    .platforms-mobile-scroll::-webkit-scrollbar {
-      display: none !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 8px !important;
+      margin-bottom: 8px !important;
     }
     .platforms-mobile-scroll > div {
       flex: 0 0 auto !important;
-      height: 44px !important;
-      padding: 6px 14px !important;
+      height: 38px !important;
+      padding: 4px 10px !important;
+      border-radius: 8px !important;
     }
     .platforms-mobile-scroll > div img {
-      height: 22px !important;
+      height: 18px !important;
+      max-width: 75px !important;
     }
     .timeline-wrapper {
       margin-top: 36px !important;
@@ -175,8 +190,8 @@
         </p>
 
         <div class="hero-btn-group" data-reveal="" style="margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px">
-          <a href="/consulting#book" style="font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 220ms ease,box-shadow 220ms ease" style-hover="background:#8A5A34;box-shadow:0 10px 28px rgba(138,90,52,0.26)">Book a 1:1 Session — {{ price }}</a>
-          <a href="/courses" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore the courses →</a>
+          <a class="btn-primary" href="/consulting#book" style="font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 220ms ease,box-shadow 220ms ease" style-hover="background:#8A5A34;box-shadow:0 10px 28px rgba(138,90,52,0.26)">Book a 1:1 Session</a>
+          <a class="btn-secondary" href="/courses" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore the courses →</a>
         </div>
 
         <div class="hero-stats-grid" data-reveal="" style="margin-top:clamp(40px,5vw,58px);padding-top:30px;border-top:1px solid #E2D9C9;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,45%),1fr));gap:26px 20px">
@@ -196,7 +211,6 @@
       </div>
 
       <div style="position:relative;max-width:460px;width:100%;margin:0 auto">
-        <div data-parallax="0.12" style="position:absolute;top:-6%;right:-8%;width:min(70%,340px);aspect-ratio:1;border-radius:999px;background:radial-gradient(circle at 32% 30%,rgba(181,121,74,0.24),rgba(237,228,211,0.55) 62%,rgba(250,247,242,0) 76%);filter:blur(2px)"></div>
         <div data-reveal="" style="position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid #E2D9C9;box-shadow:0 18px 50px rgba(30,27,23,0.09);background:#EDE4D3;display:flex;align-items:center;justify-content:center">
           <img src="Media/sania-hero-laptop.jpg" alt="Sania Maqsood Working on Laptop" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" />
         </div>
