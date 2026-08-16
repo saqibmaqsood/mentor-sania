@@ -20,6 +20,13 @@
   body { margin: 0; background: #FAF7F2; color: #1E1B17; -webkit-font-smoothing: antialiased; }
   a { color: #B5794A; }
   a:hover { color: #8A5A34; }
+  @media (max-width: 768px) {
+    .consulting-sticky-col {
+      position: static !important;
+      top: auto !important;
+      align-self: auto !important;
+    }
+  }
 </style>
 </helmet>
 
@@ -97,7 +104,7 @@
   <!-- WHAT YOU GET -->
   <section data-screen-label="Included" style="padding:clamp(64px,8vw,110px) clamp(20px,5vw,64px)">
     <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:clamp(32px,5vw,72px);align-items:start">
-      <div style="position:sticky;top:104px">
+      <div class="consulting-sticky-col" style="position:sticky;top:104px">
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#B5794A">What's included</span>
         <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,52px);line-height:1.05;letter-spacing:-0.02em">One session, four deliverables.</h2>
         <p data-reveal="" style="margin:20px 0 0;font-size:17px;line-height:1.66;color:rgba(30,27,23,0.66);max-width:440px;text-wrap:pretty">The call is the middle of the work, not all of it. Most of the value is in the audit before and the plan after.</p>
@@ -147,7 +154,7 @@
   <!-- CONSULTING FAQ -->
   <section data-screen-label="Consulting FAQ" style="padding:clamp(56px,7vw,100px) clamp(20px,5vw,64px);background:#EDE4D3;border-top:1px solid #E2D9C9">
     <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(30px,5vw,72px);align-items:start">
-      <div style="position:sticky;top:clamp(90px,10vh,120px);align-self:start">
+      <div class="consulting-sticky-col" style="position:sticky;top:clamp(90px,10vh,120px);align-self:start">
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A5A34">Session questions</span>
         <h2 data-reveal="" style="margin:16px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:1.06;letter-spacing:-0.02em">About the 1:1, specifically.</h2>
         <p data-reveal="" style="margin:14px 0 0;max-width:400px;font-size:16px;line-height:1.62;color:rgba(30,27,23,0.64);text-wrap:pretty">Everything you need to know about preparing your links, the pre-session audit, call scheduling, and post-call action plans.</p>

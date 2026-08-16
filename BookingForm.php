@@ -10,13 +10,22 @@
 <x-dc>
 <helmet>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+@media (max-width: 768px) {
+  .booking-sticky-aside {
+    position: static !important;
+    top: auto !important;
+    align-self: auto !important;
+  }
+}
+</style>
 </helmet>
 <section data-screen-label="Booking form" id="book" style="font-family:Manrope,system-ui,sans-serif;color:#1E1B17;padding:clamp(72px,9vw,120px) clamp(20px,5vw,64px);background:#FAF7F2">
   <div style="max-width:1240px;margin:0 auto">
     <sc-if value="{{ formOpen }}" hint-placeholder-val="{{ true }}">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(26px,3.4vw,54px);align-items:start">
 
-        <aside style="position:sticky;top:clamp(90px,10vh,120px);align-self:start;display:flex;flex-direction:column;gap:22px">
+        <aside class="booking-sticky-aside" style="position:sticky;top:clamp(90px,10vh,120px);align-self:start;display:flex;flex-direction:column;gap:22px">
           <div>
             <span style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A5A34">Booking request</span>
             <h2 style="margin:16px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.05;letter-spacing:-0.02em;text-wrap:balance">Tell me what's stuck.</h2>

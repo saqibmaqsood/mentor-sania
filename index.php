@@ -137,7 +137,10 @@
       margin-top: 0 !important;
       font-size: 20px !important;
     }
-    .skills-sticky-col {
+    .skills-sticky-col,
+    .faq-sticky-col,
+    .flagship-sticky-col,
+    .booking-sticky-aside {
       position: static !important;
       top: auto !important;
       align-self: auto !important;
@@ -466,7 +469,7 @@
           </div>
         </div>
       </div>
-      <div style="position:sticky;top:100px">
+      <div class="flagship-sticky-col" style="position:sticky;top:100px">
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A5A34">Inside the flagship</span>
         <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(30px,3.8vw,50px);line-height:1.08;letter-spacing:-0.02em">Everything I'd do if I started again tomorrow.</h2>
         <div style="margin-top:28px;display:flex;flex-direction:column;gap:2px">
@@ -727,7 +730,7 @@
   <!-- FAQ -->
   <section data-screen-label="FAQ" style="padding:clamp(72px,9vw,120px) clamp(20px,5vw,64px)">
     <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,72px);align-items:start">
-      <div style="position:sticky;top:104px">
+      <div class="faq-sticky-col" style="position:sticky;top:104px">
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#B5794A">Questions</span>
         <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.06;letter-spacing:-0.02em">Before you buy or book.</h2>
         <p data-reveal="" style="margin:16px 0 0;max-width:400px;font-size:16.5px;line-height:1.62;color:rgba(30,27,23,0.62);text-wrap:pretty">The questions people email me most before they hand over money or an hour of their week. Straight answers, no upsell hidden in the last line.</p>
