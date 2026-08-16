@@ -140,7 +140,9 @@
     .skills-sticky-col,
     .faq-sticky-col,
     .flagship-sticky-col,
-    .booking-sticky-aside {
+    .booking-sticky-aside,
+    #book aside,
+    section[data-screen-label="Booking form"] aside {
       position: static !important;
       top: auto !important;
       align-self: auto !important;

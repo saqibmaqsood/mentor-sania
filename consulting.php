@@ -21,7 +21,10 @@
   a { color: #B5794A; }
   a:hover { color: #8A5A34; }
   @media (max-width: 768px) {
-    .consulting-sticky-col {
+    .consulting-sticky-col,
+    .booking-sticky-aside,
+    #book aside,
+    section[data-screen-label="Booking form"] aside {
       position: static !important;
       top: auto !important;
       align-self: auto !important;

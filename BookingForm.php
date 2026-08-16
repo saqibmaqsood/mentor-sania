@@ -12,7 +12,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 @media (max-width: 768px) {
-  .booking-sticky-aside {
+  aside,
+  .booking-sticky-aside,
+  #book aside,
+  section[data-screen-label="Booking form"] aside {
     position: static !important;
     top: auto !important;
     align-self: auto !important;
