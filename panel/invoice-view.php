@@ -18,6 +18,7 @@ $items = json_decode($invoice['items_json'], true) ?: [];
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/panel/">
 <title>Invoice #<?php echo htmlspecialchars($invoice['invoice_number']); ?> — Sania Maqsood</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

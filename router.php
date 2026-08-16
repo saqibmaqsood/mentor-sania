@@ -1,7 +1,8 @@
 <?php
 $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
-if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
+// Serve real static files directly
+if ($uri !== '/' && is_file(__DIR__ . $uri)) {
     return false;
 }
 
@@ -38,10 +39,22 @@ if (preg_match('#^/resources/([a-zA-Z0-9_-]+)/?$#', $uri, $matches)) {
     exit;
 }
 
-// Admin panel
-if ($uri === '/panel' || $uri === '/panel/') {
+// Admin panel routing
+if ($uri === '/panel' || $uri === '/panel/' || $uri === '/panel/index.php') {
     require __DIR__ . '/panel/index.php';
     exit;
+}
+
+if (strpos($uri, '/panel/') === 0) {
+    $panelFile = __DIR__ . $uri;
+    if (is_file($panelFile)) {
+        require $panelFile;
+        exit;
+    }
+    if (is_file($panelFile . '.php')) {
+        require $panelFile . '.php';
+        exit;
+    }
 }
 
 return false;
