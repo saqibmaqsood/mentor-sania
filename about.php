@@ -190,7 +190,7 @@
               <span style="font-family:'Newsreader',Georgia,serif;font-size:30px;line-height:1;color:#FAF7F2">PKR 1,000</span>
               <span style="font-size:13.5px;color:rgba(250,247,242,0.5)">Single 30-min block</span>
             </div>
-            <a href="consulting.php" style="display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#1E1B17;background:#FAF7F2;text-decoration:none;padding:16px 28px;border-radius:999px;transition:background 200ms ease,box-shadow 200ms ease" style-hover="background:#EDE4D3;box-shadow:0 8px 24px rgba(0,0,0,0.3)">Book a 1:1 Session →</a>
+            <a href="/consulting" style="display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#1E1B17;background:#FAF7F2;text-decoration:none;padding:16px 28px;border-radius:999px;transition:background 200ms ease,box-shadow 200ms ease" style-hover="background:#EDE4D3;box-shadow:0 8px 24px rgba(0,0,0,0.3)">Book a 1:1 Session →</a>
           </div>
         </div>
 
@@ -218,7 +218,7 @@
               <span style="font-family:'Newsreader',Georgia,serif;font-size:30px;line-height:1;color:#FAF7F2">From PKR 2,000</span>
               <span style="font-size:13.5px;color:rgba(250,247,242,0.5)">One-time payment</span>
             </div>
-            <a href="courses.php" style="display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#FAF7F2;background:transparent;border:1px solid rgba(250,247,242,0.3);text-decoration:none;padding:16px 28px;border-radius:999px;transition:border-color 200ms ease,background 200ms ease" style-hover="border-color:#D9A879;background:rgba(217,168,121,0.1)">Explore All 17 Courses →</a>
+            <a href="/courses" style="display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;color:#FAF7F2;background:transparent;border:1px solid rgba(250,247,242,0.3);text-decoration:none;padding:16px 28px;border-radius:999px;transition:border-color 200ms ease,background 200ms ease" style-hover="border-color:#D9A879;background:rgba(217,168,121,0.1)">Explore All 17 Courses →</a>
           </div>
         </div>
 

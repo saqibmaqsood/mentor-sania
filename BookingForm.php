@@ -196,7 +196,7 @@
         <h2 style="margin:22px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em">You're booked, {{ firstName }}.</h2>
         <p style="margin:16px auto 0;max-width:480px;font-size:16.5px;line-height:1.65;color:rgba(30,27,23,0.66);text-wrap:pretty">I'll verify the payment and send your Zoom link with two confirmed times within 24 hours. If anything looks off, I'll email you before charging ahead.</p>
         <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
-          <a href="courses.php" style="font-size:15px;font-weight:600;color:#FAF7F2;background:#1E1B17;text-decoration:none;padding:14px 26px;border-radius:999px">Browse courses while you wait</a>
+          <a href="/courses" style="font-size:15px;font-weight:600;color:#FAF7F2;background:#1E1B17;text-decoration:none;padding:14px 26px;border-radius:999px">Browse courses while you wait</a>
           <button type="button" onClick="{{ reset }}" style="font-family:inherit;font-size:15px;font-weight:600;color:#1E1B17;background:transparent;border:1px solid #E2D9C9;border-radius:999px;padding:14px 26px;min-height:46px;cursor:pointer">Send another request</button>
         </div>
       </div>

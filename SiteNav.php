@@ -17,22 +17,22 @@
 </helmet>
 <header style="position:fixed;top:0;left:0;right:0;z-index:900;font-family:Manrope,system-ui,sans-serif;background:{{ barBg }};border-bottom:1px solid {{ barBorder }};backdrop-filter:{{ barBlur }};transition:background 320ms ease,border-color 320ms ease">
   <div style="max-width:1360px;margin:0 auto;padding:0 clamp(20px,5vw,64px);height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-    <a href="index.php" style="font-family:'Newsreader',Georgia,serif;font-size:23px;letter-spacing:-0.01em;color:#1E1B17;text-decoration:none;white-space:nowrap;display:flex;align-items:baseline;gap:7px">
+    <a href="/" style="font-family:'Newsreader',Georgia,serif;font-size:23px;letter-spacing:-0.01em;color:#1E1B17;text-decoration:none;white-space:nowrap;display:flex;align-items:baseline;gap:7px">
       Sania Maqsood<span style="width:5px;height:5px;border-radius:999px;background:#B5794A;display:inline-block"></span>
     </a>
 
     <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
       <nav style="display:flex;align-items:center;gap:clamp(18px,2.4vw,34px)">
         <sc-if value="{{ showHome }}">
-          <a href="index.php" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Home</a>
+          <a href="/" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Home</a>
         </sc-if>
-        <a href="courses.php" data-nav="courses.php" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Courses</a>
-        <a href="services.php" data-nav="services.php" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Services</a>
-        <a href="about.php" data-nav="about.php" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">About</a>
-        <a href="resources.php" data-nav="resources.php" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Resources</a>
-        <a href="faq.php" data-nav="faq.php" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">FAQ</a>
-        <a href="contact.php" data-nav="contact.php" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Contact</a>
-        <a href="consulting.php" style="margin-left:6px;font-size:14px;font-weight:600;letter-spacing:0.01em;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:12px 22px;border-radius:999px;white-space:nowrap;transition:background 200ms ease,box-shadow 200ms ease" style-hover="background:#8A5A34;box-shadow:0 8px 22px rgba(138,90,52,0.28)">Book a session</a>
+        <a href="/courses" data-nav="/courses" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Courses</a>
+        <a href="/services" data-nav="/services" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Services</a>
+        <a href="/about" data-nav="/about" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">About</a>
+        <a href="/resources" data-nav="/resources" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Resources</a>
+        <a href="/faq" data-nav="/faq" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">FAQ</a>
+        <a href="/contact" data-nav="/contact" style="font-size:14.5px;font-weight:500;letter-spacing:0.01em;color:#1E1B17;text-decoration:none;padding:6px 0;transition:color 180ms ease" style-hover="color:#8A5A34">Contact</a>
+        <a href="/consulting" style="margin-left:6px;font-size:14px;font-weight:600;letter-spacing:0.01em;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:12px 22px;border-radius:999px;white-space:nowrap;transition:background 200ms ease,box-shadow 200ms ease" style-hover="background:#8A5A34;box-shadow:0 8px 22px rgba(138,90,52,0.28)">Book a session</a>
       </nav>
     </sc-if>
 
@@ -53,16 +53,16 @@
     </div>
     <nav style="margin-top:8vh;display:flex;flex-direction:column;gap:4px">
       <sc-if value="{{ showHome }}">
-        <a href="index.php" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 30ms forwards">Home</a>
+        <a href="/" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 30ms forwards">Home</a>
       </sc-if>
-      <a href="courses.php" data-nav="courses.php" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 60ms forwards">Courses</a>
-      <a href="services.php" data-nav="services.php" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 100ms forwards">Services</a>
-      <a href="about.php" data-nav="about.php" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 140ms forwards">About</a>
-      <a href="resources.php" data-nav="resources.php" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 180ms forwards">Resources</a>
-      <a href="faq.php" data-nav="faq.php" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 220ms forwards">FAQ</a>
-      <a href="contact.php" data-nav="contact.php" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 260ms forwards">Contact</a>
+      <a href="/courses" data-nav="/courses" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 60ms forwards">Courses</a>
+      <a href="/services" data-nav="/services" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 100ms forwards">Services</a>
+      <a href="/about" data-nav="/about" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 140ms forwards">About</a>
+      <a href="/resources" data-nav="/resources" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 180ms forwards">Resources</a>
+      <a href="/faq" data-nav="/faq" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 220ms forwards">FAQ</a>
+      <a href="/contact" data-nav="/contact" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(32px,9vw,46px);color:#1E1B17;text-decoration:none;padding:10px 0;border-bottom:1px solid #E2D9C9;opacity:0;animation:navItemIn 380ms cubic-bezier(0.22,1,0.36,1) 260ms forwards">Contact</a>
     </nav>
-    <a href="consulting.php" style="margin-top:auto;text-align:center;font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:18px 24px;border-radius:999px">Book a session</a>
+    <a href="/consulting" style="margin-top:auto;text-align:center;font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:18px 24px;border-radius:999px">Book a session</a>
   </div>
 </sc-if>
 </x-dc>

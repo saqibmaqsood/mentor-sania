@@ -51,8 +51,8 @@
         </p>
 
         <div data-reveal="" style="margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px">
-          <a href="consulting.php#book" style="font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 220ms ease,box-shadow 220ms ease" style-hover="background:#8A5A34;box-shadow:0 10px 28px rgba(138,90,52,0.26)">Book a 1:1 Session — {{ price }}</a>
-          <a href="courses.php" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore the courses →</a>
+          <a href="/consulting#book" style="font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 220ms ease,box-shadow 220ms ease" style-hover="background:#8A5A34;box-shadow:0 10px 28px rgba(138,90,52,0.26)">Book a 1:1 Session — {{ price }}</a>
+          <a href="/courses" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore the courses →</a>
         </div>
 
         <div data-reveal="" style="margin-top:clamp(40px,5vw,58px);padding-top:30px;border-top:1px solid #E2D9C9;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,45%),1fr));gap:26px 20px">
@@ -208,7 +208,7 @@
           <p data-reveal="" style="margin:24px 0 0;font-size:17px;line-height:1.68;color:rgba(30,27,23,0.68);max-width:520px;text-wrap:pretty">
             Six years ago I was writing product roundups nobody read. Today Pinterest sends my content to millions of people a month, and the affiliate systems behind it pay whether or not I post. I teach exactly that — the boring, repeatable part.
           </p>
-          <a data-reveal="" href="about.php" style="display:inline-block;margin-top:26px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Read the full story →</a>
+          <a data-reveal="" href="/about" style="display:inline-block;margin-top:26px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Read the full story →</a>
         </div>
       </div>
 
@@ -242,7 +242,7 @@
         </div>
         <div data-reveal="" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;text-align:right">
           <span style="font-size:14px;color:rgba(30,27,23,0.6);max-width:300px;text-wrap:pretty">Live on Zoom, one hour a night — from PKR 2,000</span>
-          <a href="courses.php" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;white-space:nowrap;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore all 17 courses →</a>
+          <a href="/courses" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;white-space:nowrap;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore all 17 courses →</a>
         </div>
       </div>
 
@@ -396,7 +396,7 @@
 
           <div data-reveal="" style="margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px">
             <a href="#book" style="font-size:15px;font-weight:600;color:#1E1B17;background:#FAF7F2;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 220ms ease" style-hover="background:#EDE4D3">Request a session — {{ price }}</a>
-            <a href="consulting.php" style="font-size:15px;font-weight:600;color:#FAF7F2;text-decoration:none;border-bottom:1px solid rgba(250,247,242,0.35);padding-bottom:3px" style-hover="border-color:#D9A879;color:#D9A879">What's included →</a>
+            <a href="/consulting" style="font-size:15px;font-weight:600;color:#FAF7F2;text-decoration:none;border-bottom:1px solid rgba(250,247,242,0.35);padding-bottom:3px" style-hover="border-color:#D9A879;color:#D9A879">What's included →</a>
           </div>
         </div>
 
@@ -460,7 +460,7 @@
             </div>
           </figure>
         </sc-for>
-        <a href="resources.php" style="break-inside:avoid;display:flex;flex-direction:column;justify-content:center;gap:8px;margin:0 0 16px;text-decoration:none;color:#FAF7F2;background:#B5794A;border:1px solid #B5794A;border-radius:16px;padding:24px;min-height:132px;transition:background 220ms ease,border-color 220ms ease" style-hover="background:#8A5A34;border-color:#8A5A34">
+        <a href="/resources" style="break-inside:avoid;display:flex;flex-direction:column;justify-content:center;gap:8px;margin:0 0 16px;text-decoration:none;color:#FAF7F2;background:#B5794A;border:1px solid #B5794A;border-radius:16px;padding:24px;min-height:132px;transition:background 220ms ease,border-color 220ms ease" style-hover="background:#8A5A34;border-color:#8A5A34">
           <span style="font-family:'Newsreader',Georgia,serif;font-size:26px;line-height:1.1">+132 more reviews</span>
           <span style="font-size:14.5px;color:rgba(250,247,242,0.78)">From every batch since 2023 — read them all →</span>
         </a>
@@ -519,7 +519,7 @@
           <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#B5794A">Free to take</span>
           <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(30px,3.8vw,48px);line-height:1.06;letter-spacing:-0.02em">Start with these.</h2>
         </div>
-        <a data-reveal="" href="resources.php" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;white-space:nowrap" style-hover="border-color:#B5794A;color:#8A5A34">All resources →</a>
+        <a data-reveal="" href="/resources" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;white-space:nowrap" style-hover="border-color:#B5794A;color:#8A5A34">All resources →</a>
       </div>
       <div style="margin-top:clamp(30px,4vw,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px">
         <sc-for list="{{ freebies }}" as="r" hint-placeholder-count="3">
@@ -561,7 +561,7 @@
         </div>
       </div>
 
-      <form data-reveal="" action="mail-handler.php" method="post" style="background:#FAF7F2;border:1px solid #D9CDB6;border-radius:20px;padding:clamp(26px,3vw,38px);display:flex;flex-direction:column;gap:14px">
+      <form data-reveal="" action="/mail-handler.php" method="post" style="background:#FAF7F2;border:1px solid #D9CDB6;border-radius:20px;padding:clamp(26px,3vw,38px);display:flex;flex-direction:column;gap:14px">
         <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid #E2D9C9">
           <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(20px,2vw,26px);line-height:1.15">Get this Sunday's issue</span>
           <span style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(30,27,23,0.45);white-space:nowrap">Free</span>
@@ -589,7 +589,7 @@
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#B5794A">Questions</span>
         <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.06;letter-spacing:-0.02em">Before you buy or book.</h2>
         <p data-reveal="" style="margin:16px 0 0;max-width:400px;font-size:16.5px;line-height:1.62;color:rgba(30,27,23,0.62);text-wrap:pretty">The questions people email me most before they hand over money or an hour of their week. Straight answers, no upsell hidden in the last line.</p>
-        <a data-reveal="" href="contact.php" style="display:inline-block;margin-top:22px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">Still unsure? Ask me directly →</a>
+        <a data-reveal="" href="/contact" style="display:inline-block;margin-top:22px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">Still unsure? Ask me directly →</a>
       </div>
       <div style="display:flex;flex-direction:column">
         <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="6">
@@ -615,13 +615,13 @@
     <div style="max-width:1360px;margin:0 auto">
       <h2 data-reveal="" style="margin:0;max-width:840px;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(34px,5.4vw,72px);line-height:1.02;letter-spacing:-0.025em;text-wrap:balance">Two ways to start. Both of them today.</h2>
       <div style="margin-top:clamp(38px,5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:20px">
-        <a data-reveal="" href="courses.php" style="text-decoration:none;color:inherit;border:1px solid rgba(250,247,242,0.18);border-radius:18px;padding:clamp(28px,3.4vw,44px);display:flex;flex-direction:column;gap:14px;min-height:260px;transition:background 240ms ease,border-color 240ms ease" style-hover="background:rgba(250,247,242,0.05);border-color:#D9A879">
+        <a data-reveal="" href="/courses" style="text-decoration:none;color:inherit;border:1px solid rgba(250,247,242,0.18);border-radius:18px;padding:clamp(28px,3.4vw,44px);display:flex;flex-direction:column;gap:14px;min-height:260px;transition:background 240ms ease,border-color 240ms ease" style-hover="background:rgba(250,247,242,0.05);border-color:#D9A879">
           <span style="font-size:11.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#D9A879">Learn at your pace</span>
           <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.2vw,40px);line-height:1.08">Take a course</span>
           <span style="font-size:16.5px;line-height:1.62;color:rgba(250,247,242,0.66);max-width:380px;text-wrap:pretty">Seventeen live programmes from PKR 2,000. One hour a night on Zoom, Monday to Friday at 9 PM, recordings included.</span>
           <span style="margin-top:auto;font-size:15px;font-weight:600;color:#FAF7F2">Browse the courses →</span>
         </a>
-        <a data-reveal="" href="consulting.php" style="text-decoration:none;color:#1E1B17;background:#FAF7F2;border:1px solid #FAF7F2;border-radius:18px;padding:clamp(28px,3.4vw,44px);display:flex;flex-direction:column;gap:14px;min-height:260px;transition:border-color 220ms ease" style-hover="box-shadow:0 16px 40px rgba(0,0,0,0.25)">
+        <a data-reveal="" href="/consulting" style="text-decoration:none;color:#1E1B17;background:#FAF7F2;border:1px solid #FAF7F2;border-radius:18px;padding:clamp(28px,3.4vw,44px);display:flex;flex-direction:column;gap:14px;min-height:260px;transition:border-color 220ms ease" style-hover="box-shadow:0 16px 40px rgba(0,0,0,0.25)">
           <span style="font-size:11.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#8A5A34">Direct strategy</span>
           <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.2vw,40px);line-height:1.08">1:1 Consulting</span>
           <span style="font-size:16.5px;line-height:1.62;color:rgba(30,27,23,0.68);max-width:380px;text-wrap:pretty">A dedicated 30-minute private strategy session. Pre-session audit with a custom written 30-day action plan. {{ price }} — {{ slots }} slots left this month.</span>

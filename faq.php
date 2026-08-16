@@ -95,7 +95,7 @@
         <!-- ACTION CARDS -->
         <div data-reveal="" style="display:flex;flex-direction:column;gap:16px">
           
-          <a href="contact.php" style="text-decoration:none;background:#FAF7F2;color:#1E1B17;border-radius:18px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background 200ms ease,box-shadow 200ms ease" style-hover="background:#EDE4D3;box-shadow:0 10px 28px rgba(0,0,0,0.25)">
+          <a href="/contact" style="text-decoration:none;background:#FAF7F2;color:#1E1B17;border-radius:18px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background 200ms ease,box-shadow 200ms ease" style-hover="background:#EDE4D3;box-shadow:0 10px 28px rgba(0,0,0,0.25)">
             <div>
               <span style="display:block;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A5A34">Option 01</span>
               <div style="margin-top:4px;font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:400;color:#1E1B17">Send an awkward question</div>
@@ -104,7 +104,7 @@
             <span style="font-size:20px;color:#8A5A34;font-weight:700">→</span>
           </a>
 
-          <a href="consulting.php" style="text-decoration:none;background:rgba(250,247,242,0.06);border:1px solid rgba(250,247,242,0.18);color:#FAF7F2;border-radius:18px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:border-color 200ms ease,background 200ms ease" style-hover="border-color:#D9A879;background:rgba(217,168,121,0.1)">
+          <a href="/consulting" style="text-decoration:none;background:rgba(250,247,242,0.06);border:1px solid rgba(250,247,242,0.18);color:#FAF7F2;border-radius:18px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:border-color 200ms ease,background 200ms ease" style-hover="border-color:#D9A879;background:rgba(217,168,121,0.1)">
             <div>
               <span style="display:block;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#D9A879">Option 02</span>
               <div style="margin-top:4px;font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:400;color:#FAF7F2">Book a 1:1 Strategy Session</div>

@@ -94,7 +94,7 @@
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A5A34">How the classes run</span>
         <h2 data-reveal="" style="margin:16px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(30px,3.8vw,50px);line-height:1.06;letter-spacing:-0.02em">Live, every weekday night.</h2>
         <p data-reveal="" style="margin:20px 0 0;font-size:17px;line-height:1.65;color:rgba(30,27,23,0.68);max-width:480px;text-wrap:pretty">Same rhythm for every programme, so you can take two courses back to back without rearranging your life. Ask your questions in the class; the recording is up the same night.</p>
-        <a data-reveal="" href="contact.php" style="display:inline-block;margin-top:26px;font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 200ms ease" style-hover="background:#8A5A34">Ask about the next batch</a>
+        <a data-reveal="" href="/contact" style="display:inline-block;margin-top:26px;font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 200ms ease" style-hover="background:#8A5A34">Ask about the next batch</a>
       </div>
       <div data-reveal="" style="background:#FAF7F2;border:1px solid #D9CDB6;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:1px;background-image:linear-gradient(#E2D9C9,#E2D9C9)">
         <sc-for list="{{ runFacts }}" as="f" hint-placeholder-count="4">
@@ -137,7 +137,7 @@
           </div>
         </div>
         <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
-          <a href="contact.php" style="font-size:15px;font-weight:600;color:#1E1B17;background:#FAF7F2;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 200ms ease" style-hover="background:#EDE4D3">Ask which course fits</a>
+          <a href="/contact" style="font-size:15px;font-weight:600;color:#1E1B17;background:#FAF7F2;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 200ms ease" style-hover="background:#EDE4D3">Ask which course fits</a>
           <span style="font-size:14.5px;color:rgba(250,247,242,0.55)">Reply within one working day · no sales pitch</span>
         </div>
       </div>

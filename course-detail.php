@@ -30,7 +30,7 @@
     <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr));gap:clamp(32px,4vw,72px);align-items:center">
       <div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
-          <a href="courses.php" style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(30,27,23,0.45);text-decoration:none">Courses</a>
+          <a href="/courses" style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(30,27,23,0.45);text-decoration:none">Courses</a>
           <span style="color:rgba(30,27,23,0.3)">/</span>
           <span style="font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#B5794A">{{ cat }}</span>
         </div>
@@ -140,7 +140,7 @@
               </a>
             </sc-for>
           </div>
-          <a href="courses.php" style="display:inline-block;margin-top:16px;font-size:14.5px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">See all courses →</a>
+          <a href="/courses" style="display:inline-block;margin-top:16px;font-size:14.5px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">See all courses →</a>
         </div>
       </aside>
     </div>
@@ -161,7 +161,7 @@
         <h2 data-reveal="" style="margin:16px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:1.06;letter-spacing:-0.02em">{{ teacher }}</h2>
         <div data-reveal="" style="margin-top:10px;font-size:14px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:#D9A879">{{ teacherRole }}</div>
         <p data-reveal="" style="margin:20px 0 0;font-size:17px;line-height:1.66;color:rgba(250,247,242,0.7);max-width:520px;text-wrap:pretty">{{ teacherBio }}</p>
-        <a data-reveal="" href="about.php" style="display:inline-block;margin-top:22px;font-size:15px;font-weight:600;color:#FAF7F2;text-decoration:none;border-bottom:1px solid rgba(250,247,242,0.35);padding-bottom:3px" style-hover="border-color:#D9A879;color:#D9A879">More about me →</a>
+        <a data-reveal="" href="/about" style="display:inline-block;margin-top:22px;font-size:15px;font-weight:600;color:#FAF7F2;text-decoration:none;border-bottom:1px solid rgba(250,247,242,0.35);padding-bottom:3px" style-hover="border-color:#D9A879;color:#D9A879">More about me →</a>
       </div>
     </div>
   </section>
@@ -198,7 +198,7 @@
       <div>
         <h2 data-reveal="" style="margin:0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:1.06;letter-spacing:-0.02em">Course questions.</h2>
         <p data-reveal="" style="margin:14px 0 0;max-width:400px;font-size:16px;line-height:1.62;color:rgba(30,27,23,0.64);text-wrap:pretty">Commonly asked questions regarding live Zoom schedules, session recordings, payment methods, and ongoing support for this batch.</p>
-        <a data-reveal="" href="contact.php" style="display:inline-block;margin-top:20px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">Have another question? Ask me directly →</a>
+        <a data-reveal="" href="/contact" style="display:inline-block;margin-top:20px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">Have another question? Ask me directly →</a>
       </div>
       <div style="display:flex;flex-direction:column">
         <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="4">

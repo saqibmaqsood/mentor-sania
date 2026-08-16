@@ -150,7 +150,7 @@
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#8A5A34">Session questions</span>
         <h2 data-reveal="" style="margin:16px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:1.06;letter-spacing:-0.02em">About the 1:1, specifically.</h2>
         <p data-reveal="" style="margin:14px 0 0;max-width:400px;font-size:16px;line-height:1.62;color:rgba(30,27,23,0.64);text-wrap:pretty">Everything you need to know about preparing your links, the pre-session audit, call scheduling, and post-call action plans.</p>
-        <a data-reveal="" href="faq.php" style="display:inline-block;margin-top:20px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">General FAQ →</a>
+        <a data-reveal="" href="/faq" style="display:inline-block;margin-top:20px;font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px" style-hover="border-color:#B5794A;color:#8A5A34">General FAQ →</a>
       </div>
       <div style="display:flex;flex-direction:column">
         <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">

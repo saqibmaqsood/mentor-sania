@@ -229,7 +229,7 @@
         </div>
 
         <!-- FORM -->
-        <form data-reveal="" action="mail-handler.php" method="post" style="display:flex;flex-direction:column;gap:16px">
+        <form data-reveal="" action="/mail-handler.php" method="post" style="display:flex;flex-direction:column;gap:16px">
           <input type="hidden" name="list" value="services-inquiry" />
           <input type="text" name="hp_field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
 

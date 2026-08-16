@@ -14,7 +14,7 @@
   <div style="max-width:1360px;margin:0 auto">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:clamp(32px,4vw,64px);align-items:start">
       <div style="max-width:340px;display:flex;flex-direction:column;gap:16px">
-        <a href="index.php" style="font-family:'Newsreader',Georgia,serif;font-size:27px;letter-spacing:-0.01em;color:inherit;text-decoration:none">Sania Maqsood</a>
+        <a href="/" style="font-family:'Newsreader',Georgia,serif;font-size:27px;letter-spacing:-0.01em;color:inherit;text-decoration:none">Sania Maqsood</a>
         <p style="margin:0;font-size:15px;line-height:1.65;color:rgba(250,247,242,0.62);text-wrap:pretty">Teaching creators to build durable online income through Pinterest, affiliate strategy, and content that compounds.</p>
         <div style="display:flex;gap:10px;margin-top:4px">
           <a href="#" aria-label="Pinterest" style="width:38px;height:38px;border:1px solid rgba(250,247,242,0.2);border-radius:999px;display:flex;align-items:center;justify-content:center;color:rgba(250,247,242,0.78);text-decoration:none;transition:border-color 200ms ease,color 200ms ease,background 200ms ease" style-hover="border-color:#B5794A;color:#FAF7F2;background:rgba(181,121,74,0.16)"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.65 19.31c-.09-.79-.17-2.02.04-2.89l1.17-4.96s-.3-.6-.3-1.48c0-1.39.8-2.43 1.8-2.43.85 0 1.26.64 1.26 1.41 0 .86-.55 2.14-.83 3.33-.24 1 .5 1.82 1.49 1.82 1.79 0 3.16-2.32 3.16-5.06 0-2.13-1.43-3.72-4.03-3.72-2.82 0-4.63 2.12-4.63 4.61 0 .86.26 1.47.66 1.94.19.22.21.31.14.56-.05.18-.16.63-.21.81-.07.26-.28.35-.51.25-1.44-.59-2.11-2.17-2.11-3.95 0-2.94 2.48-6.32 7.4-6.32 3.96 0 6.57 2.86 6.57 5.94 0 4.06-2.26 7.1-5.59 7.1-1.12 0-2.17-.6-2.53-1.29l-.68 2.68c-.25.94-.91 2.11-1.36 2.83A10 10 0 1 0 12 2z"></path></svg></a>
@@ -26,25 +26,25 @@
 
       <div style="display:flex;flex-direction:column;gap:13px">
         <span style="font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,247,242,0.4)">Learn</span>
-        <a href="courses.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">All Courses</a>
-        <a href="courses/pinterest-affiliate" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Pinterest Affiliate Marketing</a>
-        <a href="resources.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Free Resources</a>
-        <a href="resources.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Journal</a>
+        <a href="/courses" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">All Courses</a>
+        <a href="/courses/pinterest-affiliate" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Pinterest Affiliate Marketing</a>
+        <a href="/resources" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Free Resources</a>
+        <a href="/resources" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Journal</a>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:13px">
         <span style="font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,247,242,0.4)">Work With Me</span>
-        <a href="services.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Client Services</a>
-        <a href="consulting.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">1:1 Strategy Session</a>
-        <a href="about.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">About Sania</a>
-        <a href="contact.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Contact</a>
-        <a href="faq.php" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">FAQ</a>
+        <a href="/services" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Client Services</a>
+        <a href="/consulting" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">1:1 Strategy Session</a>
+        <a href="/about" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">About Sania</a>
+        <a href="/contact" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">Contact</a>
+        <a href="/faq" style="font-size:15px;color:rgba(250,247,242,0.82);text-decoration:none" style-hover="color:#D9A879">FAQ</a>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:14px;max-width:300px">
         <span style="font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,247,242,0.4)">The Sunday Note</span>
         <p style="margin:0;font-size:14.5px;line-height:1.6;color:rgba(250,247,242,0.62)">One tactic, one teardown, every Sunday. No fluff.</p>
-        <form action="mail-handler.php" method="post" style="display:flex;gap:8px;flex-wrap:wrap">
+        <form action="/mail-handler.php" method="post" style="display:flex;gap:8px;flex-wrap:wrap">
           <input type="hidden" name="list" value="sunday-note" />
           <input type="text" name="hp_field" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
           <input type="email" name="email" required="required" placeholder="you@email.com" style="box-sizing:border-box;flex:1 1 150px;min-width:0;background:transparent;border:1px solid rgba(250,247,242,0.22);border-radius:999px;padding:11px 16px;font-family:Manrope,system-ui,sans-serif;font-size:14px;color:#FAF7F2;outline:none" style-focus="border-color:#B5794A" />
@@ -56,9 +56,9 @@
     <div style="margin-top:clamp(44px,5vw,72px);padding-top:26px;border-top:1px solid rgba(250,247,242,0.12);display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between">
       <span style="font-size:13px;color:rgba(250,247,242,0.42)">© 2026 Sania Maqsood. All rights reserved.</span>
       <div style="display:flex;flex-wrap:wrap;gap:22px">
-        <a href="legal.php#privacy" style="font-size:13px;color:rgba(250,247,242,0.42);text-decoration:none" style-hover="color:#FAF7F2">Privacy</a>
-        <a href="legal.php#terms" style="font-size:13px;color:rgba(250,247,242,0.42);text-decoration:none" style-hover="color:#FAF7F2">Terms</a>
-        <a href="legal.php#refunds" style="font-size:13px;color:rgba(250,247,242,0.42);text-decoration:none" style-hover="color:#FAF7F2">Refund Policy</a>
+        <a href="/legal#privacy" style="font-size:13px;color:rgba(250,247,242,0.42);text-decoration:none" style-hover="color:#FAF7F2">Privacy</a>
+        <a href="/legal#terms" style="font-size:13px;color:rgba(250,247,242,0.42);text-decoration:none" style-hover="color:#FAF7F2">Terms</a>
+        <a href="/legal#refunds" style="font-size:13px;color:rgba(250,247,242,0.42);text-decoration:none" style-hover="color:#FAF7F2">Refund Policy</a>
       </div>
     </div>
   </div>

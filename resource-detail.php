@@ -29,7 +29,7 @@
     <header data-screen-label="Article head" style="padding:clamp(112px,12vw,156px) clamp(20px,5vw,64px) clamp(32px,4vw,48px)">
       <div style="max-width:800px;margin:0 auto">
         <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
-          <a href="resources.php" style="font-size:12.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(30,27,23,0.45);text-decoration:none">Resources</a>
+          <a href="/resources" style="font-size:12.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(30,27,23,0.45);text-decoration:none">Resources</a>
           <span style="color:rgba(30,27,23,0.3)">/</span>
           <span style="font-size:12.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#B5794A">{{ cat }}</span>
         </div>

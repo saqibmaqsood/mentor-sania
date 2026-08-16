@@ -51,7 +51,7 @@
           </div>
         </sc-for>
       </div>
-      <p style="margin:clamp(36px,4vw,56px) 0 0;font-size:15.5px;line-height:1.65;color:rgba(30,27,23,0.6);text-wrap:pretty">Questions about any of this? <a href="contact.php" style="font-weight:600">Email me</a> and I'll answer in plain words too.</p>
+      <p style="margin:clamp(36px,4vw,56px) 0 0;font-size:15.5px;line-height:1.65;color:rgba(30,27,23,0.6);text-wrap:pretty">Questions about any of this? <a href="/contact" style="font-weight:600">Email me</a> and I'll answer in plain words too.</p>
     </div>
   </section>
 

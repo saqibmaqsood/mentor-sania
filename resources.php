@@ -115,7 +115,7 @@
         </div>
 
         <!-- FORM WITH NAME & EMAIL -->
-        <form data-reveal="" action="mail-handler.php" method="post" style="background:#FFFDFA;border:1px solid #E2D9C9;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px">
+        <form data-reveal="" action="/mail-handler.php" method="post" style="background:#FFFDFA;border:1px solid #E2D9C9;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px">
           <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid #EDE4D3">
             <span style="font-family:'Newsreader',Georgia,serif;font-size:22px;line-height:1.15;color:#1E1B17">Join The Sunday Note</span>
             <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4C7A5E">Free</span>
