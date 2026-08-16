@@ -137,6 +137,12 @@
       margin-top: 0 !important;
       font-size: 20px !important;
     }
+    .skills-sticky-col {
+      position: static !important;
+      top: auto !important;
+      align-self: auto !important;
+      z-index: auto !important;
+    }
     .section-header-wrap {
       flex-direction: column !important;
       align-items: flex-start !important;
@@ -485,7 +491,7 @@
   <!-- SKILL ECOSYSTEM -->
   <section data-screen-label="Skill ecosystem" style="padding:clamp(72px,9vw,120px) clamp(20px,5vw,64px)">
     <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(32px,5vw,72px);align-items:start">
-      <div style="position:sticky;top:clamp(90px,10vh,120px);align-self:start;z-index:2">
+      <div class="skills-sticky-col" style="position:sticky;top:clamp(90px,10vh,120px);align-self:start;z-index:2">
         <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#B5794A">WHAT YOU'LL LEARN</span>
         <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(32px,4.2vw,54px);line-height:1.06;letter-spacing:-0.02em">Seventeen programmes, one income system.</h2>
         <p data-reveal="" style="margin:22px 0 0;font-size:17px;line-height:1.66;color:rgba(30,27,23,0.66);max-width:420px;text-wrap:pretty">They're taught separately because that's how you learn them. They're designed to stack because that's how they pay.</p>
