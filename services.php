@@ -6,7 +6,7 @@
 <title>Done-For-You Digital Services — Sania Maqsood & Team</title>
 <meta name="description" content="Custom Website Development, E-Commerce Setup, Tailored ERP Software, SEO, Meta & Google Ads, Mobile Apps, and Brand Design executed by senior practitioners." />
 <style>x-dc{display:none!important}.sc-placeholder{display:none!important}</style>
-<script src="/support.js"></script>
+<script src="/support.js?v=20260816_2"></script>
 </head>
 <body>
 <x-dc>

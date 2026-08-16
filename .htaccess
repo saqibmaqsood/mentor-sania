@@ -2,13 +2,19 @@ Options -MultiViews +FollowSymLinks
 RewriteEngine On
 RewriteBase /
 
-# 1. 301 Redirect direct /index.php to /
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
-RewriteRule ^index\.php$ / [R=301,L]
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</IfModule>
 
-# 2. 301 Redirect direct *.php to clean URL (only on external browser request)
+# 1. Redirect direct /index.php to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [R=302,L]
+
+# 2. Redirect direct *.php to clean URL (only on external browser request)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(about|courses|services|consulting|contact|faq|legal|resources)\.php [NC]
-RewriteRule ^(about|courses|services|consulting|contact|faq|legal|resources)\.php$ /$1 [R=301,L]
+RewriteRule ^(about|courses|services|consulting|contact|faq|legal|resources)\.php$ /$1 [R=302,L]
 
 # 3. Dynamic course & resource detail routes
 RewriteRule ^courses/([a-zA-Z0-9_-]+)/?$ course-detail.php?c=$1 [L,QSA]
