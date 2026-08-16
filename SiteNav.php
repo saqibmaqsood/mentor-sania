@@ -47,7 +47,7 @@
 </header>
 
 <sc-if value="{{ menuOpen }}">
-  <div style="position:fixed;inset:0;z-index:1000;background:#FAF7F2;font-family:Manrope,system-ui,sans-serif;display:flex;flex-direction:column;padding:clamp(20px,5vw,64px)">
+  <div style="position:fixed;inset:0;z-index:1000;background:#FAF7F2;font-family:Manrope,system-ui,sans-serif;display:flex;flex-direction:column;padding:clamp(20px,5vw,64px);overflow-y:auto;-webkit-overflow-scrolling:touch">
     <div style="height:54px;display:flex;align-items:center;justify-content:space-between">
       <span style="font-family:'Newsreader',Georgia,serif;font-size:22px;color:#1E1B17">Sania Maqsood</span>
       <button type="button" onClick="{{ toggleMenu }}" aria-label="Close menu" style="width:44px;height:44px;background:transparent;border:0;font-size:26px;line-height:1;color:#1E1B17;cursor:pointer">&times;</button>

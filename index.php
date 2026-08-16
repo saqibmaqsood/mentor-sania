@@ -25,6 +25,129 @@
   @keyframes omMarqueeL { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   @keyframes omMarqueeR { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
   @media (prefers-reduced-motion: reduce) { [style*="omMarquee"] { animation: none !important; } }
+
+  /* ==========================================================================
+     MOBILE RESPONSIVE ENHANCEMENTS (Strictly max-width: 768px & 480px)
+     Desktop & Tablet views (> 768px) remain 100% UNTOUCHED
+     ========================================================================== */
+  @media (max-width: 768px) {
+    section[data-screen-label="Hero"] {
+      padding-top: 96px !important;
+      padding-bottom: 40px !important;
+    }
+    .hero-btn-group {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 12px !important;
+    }
+    .hero-btn-group a {
+      text-align: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .hero-stats-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 12px 8px !important;
+      text-align: center !important;
+    }
+    .hero-stats-grid div {
+      min-width: 0 !important;
+    }
+    .hero-stats-grid .stat-num {
+      font-size: clamp(22px, 5.5vw, 30px) !important;
+    }
+    .hero-stats-grid .stat-label {
+      font-size: 10.5px !important;
+      letter-spacing: 0.04em !important;
+    }
+    .hero-floating-card {
+      position: absolute !important;
+      bottom: 8px !important;
+      left: 8px !important;
+      right: 8px !important;
+      max-width: calc(100% - 16px) !important;
+      box-sizing: border-box !important;
+      padding: 10px 14px !important;
+    }
+    .platforms-mobile-scroll {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      gap: 10px !important;
+      padding: 4px 0 12px !important;
+      scrollbar-width: none !important;
+      justify-content: flex-start !important;
+    }
+    .platforms-mobile-scroll::-webkit-scrollbar {
+      display: none !important;
+    }
+    .platforms-mobile-scroll > div {
+      flex: 0 0 auto !important;
+      height: 44px !important;
+      padding: 6px 14px !important;
+    }
+    .platforms-mobile-scroll > div img {
+      height: 22px !important;
+    }
+    .timeline-wrapper {
+      margin-top: 36px !important;
+      padding-top: 20px !important;
+    }
+    .timeline-line {
+      display: none !important;
+    }
+    .timeline-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+      border-left: 2px solid #E2D9C9 !important;
+      padding-left: 18px !important;
+      margin-left: 8px !important;
+    }
+    .timeline-item {
+      position: relative !important;
+      padding-right: 0 !important;
+    }
+    .timeline-item .timeline-bullet {
+      position: absolute !important;
+      left: -28px !important;
+      top: 0 !important;
+    }
+    .timeline-item .timeline-year {
+      margin-top: 0 !important;
+      font-size: 20px !important;
+    }
+    .section-header-wrap {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      gap: 12px !important;
+    }
+    .section-header-wrap .header-right {
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+    .testimonials-columns {
+      columns: 1 !important;
+    }
+    .final-cta-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .course-mini-item {
+      grid-template-columns: 76px 1fr !important;
+      gap: 12px !important;
+      padding: 10px !important;
+    }
+    .course-mini-item h3 {
+      font-size: 18.5px !important;
+    }
+  }
 </style>
 </helmet>
 
@@ -51,23 +174,23 @@
           I'm Sania — I teach creators how to turn Pinterest, affiliate offers, and content that compounds into income that doesn't depend on going viral. Courses for the build, 1:1 sessions for the shortcuts.
         </p>
 
-        <div data-reveal="" style="margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px">
+        <div class="hero-btn-group" data-reveal="" style="margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px">
           <a href="/consulting#book" style="font-size:15px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:16px 30px;border-radius:999px;transition:background 220ms ease,box-shadow 220ms ease" style-hover="background:#8A5A34;box-shadow:0 10px 28px rgba(138,90,52,0.26)">Book a 1:1 Session — {{ price }}</a>
           <a href="/courses" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore the courses →</a>
         </div>
 
-        <div data-reveal="" style="margin-top:clamp(40px,5vw,58px);padding-top:30px;border-top:1px solid #E2D9C9;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,45%),1fr));gap:26px 20px">
+        <div class="hero-stats-grid" data-reveal="" style="margin-top:clamp(40px,5vw,58px);padding-top:30px;border-top:1px solid #E2D9C9;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,45%),1fr));gap:26px 20px">
           <div>
-            <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(30px,3.2vw,40px);line-height:1;letter-spacing:-0.01em"><span data-count="500" data-format="comma">500</span>+</div>
-            <div style="margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(30,27,23,0.48)">Students taught</div>
+            <div class="stat-num" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(30px,3.2vw,40px);line-height:1;letter-spacing:-0.01em"><span data-count="500" data-format="comma">500</span>+</div>
+            <div class="stat-label" style="margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(30,27,23,0.48)">Students taught</div>
           </div>
           <div>
-            <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(30px,3.2vw,40px);line-height:1;letter-spacing:-0.01em"><span data-count="17">17</span></div>
-            <div style="margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(30,27,23,0.48)">Live programmes</div>
+            <div class="stat-num" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(30px,3.2vw,40px);line-height:1;letter-spacing:-0.01em"><span data-count="17">17</span></div>
+            <div class="stat-label" style="margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(30,27,23,0.48)">Live programmes</div>
           </div>
           <div>
-            <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(30px,3.2vw,40px);line-height:1;letter-spacing:-0.01em"><span data-count="4.9" data-decimals="1">4.9</span></div>
-            <div style="margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(30,27,23,0.48)">Average rating</div>
+            <div class="stat-num" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(30px,3.2vw,40px);line-height:1;letter-spacing:-0.01em"><span data-count="4.9" data-decimals="1">4.9</span></div>
+            <div class="stat-label" style="margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(30,27,23,0.48)">Average rating</div>
           </div>
         </div>
       </div>
@@ -77,8 +200,8 @@
         <div data-reveal="" style="position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid #E2D9C9;box-shadow:0 18px 50px rgba(30,27,23,0.09);background:#EDE4D3;display:flex;align-items:center;justify-content:center">
           <img src="Media/sania-hero-laptop.jpg" alt="Sania Maqsood Working on Laptop" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block" />
         </div>
-        <div data-reveal="" style="position:absolute;bottom:clamp(-14px,-1.5vw,-8px);left:clamp(-14px,-1.5vw,-20px);background:#FAF7F2;border:1px solid #E2D9C9;border-radius:14px;padding:14px 18px;box-shadow:0 8px 30px rgba(30,27,23,0.08);max-width:240px">
-          <div style="font-family:'Newsreader',Georgia,serif;font-size:18px;line-height:1.25">"First affiliate sale in 11 days."</div>
+        <div class="hero-floating-card" data-reveal="" style="position:absolute;bottom:clamp(-14px,-1.5vw,-8px);left:clamp(-14px,-1.5vw,-20px);background:#FAF7F2;border:1px solid #E2D9C9;border-radius:14px;padding:14px 18px;box-shadow:0 8px 30px rgba(30,27,23,0.08);max-width:240px">
+          <div class="quote-text" style="font-family:'Newsreader',Georgia,serif;font-size:18px;line-height:1.25">"First affiliate sale in 11 days."</div>
           <div style="margin-top:6px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(30,27,23,0.45)">Hira N. · Pinterest Engine</div>
         </div>
       </div>
@@ -92,7 +215,7 @@
       <h2 data-reveal="" style="margin:10px 0 28px;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(22px,2.6vw,32px);line-height:1.15;color:#1E1B17">Master 30+ industry-standard platforms & applications.</h2>
       
       <!-- ROW 1 (16 LOGOS) -->
-      <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px;margin-bottom:16px">
+      <div class="platforms-mobile-scroll om-scroller" data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px;margin-bottom:16px">
         <div title="Pinterest" style="border:1px solid #D9CDB6;background:#FAF7F2;padding:8px 18px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;height:52px;transition:all 200ms ease;box-shadow:0 2px 6px rgba(30,27,23,0.03)" style-hover="border-color:#B5794A;box-shadow:0 6px 16px rgba(30,27,23,0.08)">
           <img src="Media/logos/pinterest.png" alt="Pinterest" style="height:28px;width:auto;max-width:140px;object-fit:contain;display:block" />
         </div>
@@ -144,7 +267,7 @@
       </div>
 
       <!-- ROW 2 (15 LOGOS) -->
-      <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px">
+      <div class="platforms-mobile-scroll om-scroller" data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px">
         <div title="Claude" style="border:1px solid #D9CDB6;background:#FAF7F2;padding:8px 18px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;height:52px;transition:all 200ms ease;box-shadow:0 2px 6px rgba(30,27,23,0.03)" style-hover="border-color:#B5794A;box-shadow:0 6px 16px rgba(30,27,23,0.08)">
           <img src="Media/logos/claude.png" alt="Claude" style="height:28px;width:auto;max-width:140px;object-fit:contain;display:block" />
         </div>
@@ -213,17 +336,17 @@
         </div>
       </div>
 
-      <div style="margin-top:clamp(56px,7vw,96px);padding-top:clamp(40px,5vw,56px)">
+      <div class="timeline-wrapper" style="margin-top:clamp(56px,7vw,96px);padding-top:clamp(40px,5vw,56px)">
         <div style="position:relative">
-          <div style="position:absolute;left:0;right:0;top:9px;height:2px;background:#C9BCA6;opacity:0.6;z-index:0"></div>
-          <div data-progress-line="" style="position:absolute;left:0;top:9px;height:2px;width:0%;background:#B5794A;z-index:1"></div>
-          <div style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:32px 24px">
+          <div class="timeline-line" style="position:absolute;left:0;right:0;top:9px;height:2px;background:#C9BCA6;opacity:0.6;z-index:0"></div>
+          <div class="timeline-line" data-progress-line="" style="position:absolute;left:0;top:9px;height:2px;width:0%;background:#B5794A;z-index:1"></div>
+          <div class="timeline-grid" style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:32px 24px">
             <sc-for list="{{ milestones }}" as="m" hint-placeholder-count="4">
-              <div data-reveal="" style="padding-right:16px">
-                <div style="width:19px;height:19px;border-radius:999px;border:1px solid #C9BCA6;background:#FAF7F2;display:flex;align-items:center;justify-content:center">
+              <div class="timeline-item" data-reveal="" style="padding-right:16px">
+                <div class="timeline-bullet" style="width:19px;height:19px;border-radius:999px;border:1px solid #C9BCA6;background:#FAF7F2;display:flex;align-items:center;justify-content:center">
                   <span style="width:7px;height:7px;border-radius:999px;background:#B5794A;display:block"></span>
                 </div>
-                <div style="margin-top:18px;font-family:'Newsreader',Georgia,serif;font-size:24px;line-height:1.1">{{ m.year }}</div>
+                <div class="timeline-year" style="margin-top:18px;font-family:'Newsreader',Georgia,serif;font-size:24px;line-height:1.1">{{ m.year }}</div>
                 <div style="margin-top:8px;font-size:14.5px;line-height:1.6;color:rgba(30,27,23,0.62);max-width:230px;text-wrap:pretty">{{ m.text }}</div>
               </div>
             </sc-for>
@@ -236,12 +359,12 @@
   <!-- COURSES -->
   <section data-screen-label="Courses" id="courses" style="padding:clamp(72px,9vw,120px) clamp(20px,5vw,64px);background:#FAF7F2">
     <div style="max-width:1360px;margin:0 auto">
-      <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px">
+      <div class="section-header-wrap" style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px">
         <div style="max-width:640px">
           <span data-reveal="" style="display:block;font-size:11.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#B5794A">The Courses</span>
           <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(32px,4.4vw,58px);line-height:1.06;letter-spacing:-0.02em">Systems, not inspiration.</h2>
         </div>
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;text-align:right">
+        <div class="header-right" data-reveal="" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;text-align:right">
           <span style="font-size:14px;color:rgba(30,27,23,0.6);max-width:300px;text-wrap:pretty">Live on Zoom, one hour a night — from PKR 2,000</span>
           <a href="/courses" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;white-space:nowrap;transition:border-color 200ms ease,color 200ms ease" style-hover="border-color:#B5794A;color:#8A5A34">Explore all 17 courses →</a>
         </div>
@@ -278,7 +401,7 @@
 
         <div style="display:grid;gap:14px;grid-auto-rows:1fr;align-content:stretch">
           <sc-for list="{{ courses }}" as="c" hint-placeholder-count="5">
-            <div data-reveal="" data-tilt="" style="display:grid;grid-template-columns:minmax(84px,104px) 1fr;gap:16px;color:inherit;border:1px solid #E2D9C9;border-radius:14px;overflow:hidden;background:#FFFDFA;padding:14px;transition:border-color 220ms ease">
+            <div class="course-mini-item" data-reveal="" data-tilt="" style="display:grid;grid-template-columns:minmax(84px,104px) 1fr;gap:16px;color:inherit;border:1px solid #E2D9C9;border-radius:14px;overflow:hidden;background:#FFFDFA;padding:14px;transition:border-color 220ms ease">
               <div style="border-radius:10px;overflow:hidden;background:#EDE4D3;min-height:78px">
                 <img src="{{ c.img }}" alt="{{ c.title }}" style="width:100%;height:100%;object-fit:cover;display:block" />
               </div>
@@ -440,7 +563,7 @@
         </div>
       </div>
 
-      <div style="margin-top:clamp(26px,3.4vw,44px);columns:3 300px;column-gap:16px">
+      <div class="testimonials-columns" style="margin-top:clamp(26px,3.4vw,44px);columns:3 300px;column-gap:16px">
         <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="8">
           <figure data-tilt="" style="break-inside:avoid;margin:0 0 16px;background:{{ t.bg }};color:{{ t.fg }};border:1px solid {{ t.border }};border-radius:16px;padding:{{ t.pad }};display:flex;flex-direction:column;gap:14px;transition:border-color 220ms ease">
             <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
@@ -615,7 +738,7 @@
   <section data-screen-label="Final CTA" style="background:#1E1B17;color:#FAF7F2;padding:clamp(72px,9vw,128px) clamp(20px,5vw,64px)">
     <div style="max-width:1360px;margin:0 auto">
       <h2 data-reveal="" style="margin:0;max-width:840px;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(34px,5.4vw,72px);line-height:1.02;letter-spacing:-0.025em;text-wrap:balance">Two ways to start. Both of them today.</h2>
-      <div style="margin-top:clamp(38px,5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:20px">
+      <div class="final-cta-grid" style="margin-top:clamp(38px,5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:20px">
         <a data-reveal="" href="/courses" style="text-decoration:none;color:inherit;border:1px solid rgba(250,247,242,0.18);border-radius:18px;padding:clamp(28px,3.4vw,44px);display:flex;flex-direction:column;gap:14px;min-height:260px;transition:background 240ms ease,border-color 240ms ease" style-hover="background:rgba(250,247,242,0.05);border-color:#D9A879">
           <span style="font-size:11.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#D9A879">Learn at your pace</span>
           <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.2vw,40px);line-height:1.08">Take a course</span>
