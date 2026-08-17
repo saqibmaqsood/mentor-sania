@@ -47,6 +47,34 @@
       font-size: 12px !important;
       line-height: 1.45 !important;
     }
+    .timeline-line {
+      display: none !important;
+    }
+    .timeline-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+      border-left: 2px solid #E2D9C9 !important;
+      padding-left: 18px !important;
+      margin-left: 8px !important;
+    }
+    .timeline-item {
+      position: relative !important;
+      padding-right: 0 !important;
+    }
+    .timeline-item .timeline-bullet {
+      position: absolute !important;
+      left: -28px !important;
+      top: 0 !important;
+    }
+    .timeline-item .timeline-year {
+      margin-top: 0 !important;
+      font-size: 20px !important;
+    }
+    .timeline-item .timeline-text {
+      margin-top: 4px !important;
+      max-width: 100% !important;
+    }
   }
 </style>
 </helmet>
@@ -146,16 +174,16 @@
     <div style="max-width:1360px;margin:0 auto">
       <h2 data-reveal="" style="margin:0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,48px);line-height:1.06;letter-spacing:-0.02em">The short version.</h2>
       <div style="margin-top:clamp(34px,4vw,56px);position:relative">
-        <div style="position:absolute;left:0;right:0;top:9px;height:1px;background:#D9CDB6"></div>
-        <div data-progress-line="" style="position:absolute;left:0;top:9px;height:1px;width:0%;background:#B5794A"></div>
-        <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:32px 24px">
+        <div class="timeline-line" style="position:absolute;left:0;right:0;top:9px;height:1px;background:#D9CDB6"></div>
+        <div class="timeline-line" data-progress-line="" style="position:absolute;left:0;top:9px;height:1px;width:0%;background:#B5794A"></div>
+        <div class="timeline-grid" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:32px 24px">
           <sc-for list="{{ milestones }}" as="m" hint-placeholder-count="5">
-            <div data-reveal="">
-              <div style="width:19px;height:19px;border-radius:999px;border:1px solid #C9BCA6;background:#EDE4D3;display:flex;align-items:center;justify-content:center">
+            <div class="timeline-item" data-reveal="">
+              <div class="timeline-bullet" style="width:19px;height:19px;border-radius:999px;border:1px solid #C9BCA6;background:#EDE4D3;display:flex;align-items:center;justify-content:center">
                 <span style="width:7px;height:7px;border-radius:999px;background:#B5794A;display:block"></span>
               </div>
-              <div style="margin-top:18px;font-family:'Newsreader',Georgia,serif;font-size:24px;line-height:1.1">{{ m.year }}</div>
-              <div style="margin-top:8px;font-size:14.5px;line-height:1.6;color:rgba(30,27,23,0.64);max-width:230px;text-wrap:pretty">{{ m.text }}</div>
+              <div class="timeline-year" style="margin-top:18px;font-family:'Newsreader',Georgia,serif;font-size:24px;line-height:1.1">{{ m.year }}</div>
+              <div class="timeline-text" style="margin-top:8px;font-size:14.5px;line-height:1.6;color:rgba(30,27,23,0.64);max-width:230px;text-wrap:pretty">{{ m.text }}</div>
             </div>
           </sc-for>
         </div>
