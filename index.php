@@ -193,6 +193,60 @@
     .testimonials-columns > a {
       justify-content: center !important;
     }
+    .cases-scroll-wrap {
+      display: flex !important;
+      flex-direction: row !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scroll-snap-type: x mandatory !important;
+      scroll-behavior: smooth !important;
+      -webkit-overflow-scrolling: touch !important;
+      gap: 14px !important;
+      padding: 6px 20px 24px !important;
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+      margin-top: 20px !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    .cases-scroll-wrap::-webkit-scrollbar {
+      display: none !important;
+    }
+    .cases-scroll-wrap article {
+      flex: 0 0 88vw !important;
+      max-width: 360px !important;
+      min-width: 280px !important;
+      scroll-snap-align: center !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
+    .freebies-scroll-wrap {
+      display: flex !important;
+      flex-direction: row !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scroll-snap-type: x mandatory !important;
+      scroll-behavior: smooth !important;
+      -webkit-overflow-scrolling: touch !important;
+      gap: 14px !important;
+      padding: 6px 20px 24px !important;
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+      margin-top: 20px !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    .freebies-scroll-wrap::-webkit-scrollbar {
+      display: none !important;
+    }
+    .freebies-scroll-wrap > div {
+      flex: 0 0 82vw !important;
+      max-width: 320px !important;
+      min-width: 260px !important;
+      scroll-snap-align: center !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
     .mobile-swipe-hint {
       display: flex !important;
       align-items: center !important;
@@ -667,7 +721,7 @@
         <h2 data-reveal="" style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:clamp(32px,4.2vw,54px);line-height:1.06;letter-spacing:-0.02em">Before, strategy, after.</h2>
       </div>
 
-      <div style="margin-top:clamp(36px,4.5vw,56px);display:flex;flex-direction:column;gap:20px">
+      <div class="cases-scroll-wrap" style="margin-top:clamp(36px,4.5vw,56px);display:flex;flex-direction:column;gap:20px">
         <sc-for list="{{ cases }}" as="cs" hint-placeholder-count="2">
           <article data-reveal="" style="border:1px solid #E2D9C9;border-radius:16px;background:#FFFDFA;padding:clamp(24px,3vw,40px)">
             <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 24px">
@@ -712,7 +766,7 @@
         </div>
         <a data-reveal="" href="/resources" style="font-size:15px;font-weight:600;color:#1E1B17;text-decoration:none;border-bottom:1px solid #C9BCA6;padding-bottom:3px;white-space:nowrap" style-hover="border-color:#B5794A;color:#8A5A34">All resources →</a>
       </div>
-      <div style="margin-top:clamp(30px,4vw,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px">
+      <div class="freebies-scroll-wrap" style="margin-top:clamp(30px,4vw,46px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px">
         <sc-for list="{{ freebies }}" as="r" hint-placeholder-count="3">
           <div data-reveal="" style="border:1px solid #E2D9C9;border-radius:16px;background:#FFFDFA;overflow:hidden;display:flex;flex-direction:column">
             <div style="aspect-ratio:16/9;background:#EDE4D3;overflow:hidden">
@@ -990,54 +1044,63 @@ class Component extends DCLogic {
       });
     }
 
-    // Auto-scroll testimonials carousel on mobile (<= 768px)
-    const tCol = root.querySelector('.testimonials-columns');
-    if (tCol) {
-      let autoTimer = null;
+    // Auto-scroll mobile carousels (<= 768px)
+    const setupAutoScroll = (selector, interval) => {
+      const el = root.querySelector(selector);
+      if (!el) return () => {};
+      let timer = null;
       let isInteracting = false;
 
-      const stepTestimonials = () => {
+      const step = () => {
         if (isInteracting || window.innerWidth > 768) return;
-        const firstCard = tCol.querySelector('figure, a');
+        const firstCard = el.querySelector('figure, article, a, div');
         if (!firstCard) return;
         const cardW = firstCard.offsetWidth + 14;
-        const maxScroll = tCol.scrollWidth - tCol.clientWidth;
-        if (tCol.scrollLeft >= maxScroll - 20) {
-          tCol.scrollTo({ left: 0, behavior: 'smooth' });
+        const maxScroll = el.scrollWidth - el.clientWidth;
+        if (el.scrollLeft >= maxScroll - 20) {
+          el.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
-          tCol.scrollBy({ left: cardW, behavior: 'smooth' });
+          el.scrollBy({ left: cardW, behavior: 'smooth' });
         }
       };
 
-      const startAuto = () => {
-        if (autoTimer) clearInterval(autoTimer);
-        autoTimer = setInterval(stepTestimonials, 3200);
+      const start = () => {
+        if (timer) clearInterval(timer);
+        timer = setInterval(step, interval);
       };
 
-      const pauseAuto = () => {
+      const pause = () => {
         isInteracting = true;
-        if (autoTimer) clearInterval(autoTimer);
+        if (timer) clearInterval(timer);
       };
 
-      const resumeAuto = () => {
+      const resume = () => {
         isInteracting = false;
-        startAuto();
+        start();
       };
 
-      tCol.addEventListener('touchstart', pauseAuto, { passive: true });
-      tCol.addEventListener('touchend', () => setTimeout(resumeAuto, 2400), { passive: true });
-      tCol.addEventListener('mouseenter', pauseAuto);
-      tCol.addEventListener('mouseleave', resumeAuto);
+      el.addEventListener('touchstart', pause, { passive: true });
+      el.addEventListener('touchend', () => setTimeout(resume, 2400), { passive: true });
+      el.addEventListener('mouseenter', pause);
+      el.addEventListener('mouseleave', resume);
 
-      startAuto();
-      this._cleanTestimonials = () => {
-        if (autoTimer) clearInterval(autoTimer);
-      };
-    }
+      start();
+      return () => { if (timer) clearInterval(timer); };
+    };
+
+    const cleanTestimonials = setupAutoScroll('.testimonials-columns', 3200);
+    const cleanCases = setupAutoScroll('.cases-scroll-wrap', 3800);
+    const cleanFreebies = setupAutoScroll('.freebies-scroll-wrap', 3500);
+
+    this._cleanCarousels = () => {
+      cleanTestimonials();
+      cleanCases();
+      cleanFreebies();
+    };
   }
 
   componentWillUnmount() {
-    if (this._cleanTestimonials) this._cleanTestimonials();
+    if (this._cleanCarousels) this._cleanCarousels();
   }
 
   renderVals() {
