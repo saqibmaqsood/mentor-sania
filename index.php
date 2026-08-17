@@ -878,19 +878,6 @@
 
   <dc-import name="SiteFooter" hint-size="100%,460px"></dc-import>
 
-  <div style="height:{{ mobileBarSpace }}"></div>
-
-  <!-- MOBILE STICKY CTA -->
-  <sc-if value="{{ showMobileBar }}">
-    <div style="position:fixed;left:0;right:0;bottom:0;z-index:800;background:rgba(250,247,242,0.96);backdrop-filter:saturate(180%) blur(14px);border-top:1px solid #E2D9C9;padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px">
-      <div style="flex:1;min-width:0">
-        <div style="font-size:14.5px;font-weight:700;letter-spacing:-0.005em">1:1 Session — {{ price }}</div>
-        <div style="font-size:12.5px;color:rgba(30,27,23,0.55)">{{ slots }} slots left in August</div>
-      </div>
-      <a href="#book" style="flex:0 0 auto;font-size:14.5px;font-weight:600;color:#FAF7F2;background:#B5794A;text-decoration:none;padding:14px 22px;border-radius:999px;min-height:48px;display:flex;align-items:center">Book now</a>
-    </div>
-  </sc-if>
-
   <!-- LEAD-GEN MODAL -->
   <sc-if value="{{ modalOpen }}">
     <div onClick="{{ closeModal }}" style="position:fixed;inset:0;z-index:1100;background:rgba(30,27,23,0.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:20px">
@@ -1234,8 +1221,8 @@ class Component extends DCLogic {
       stop: e => e.stopPropagation(),
 
       price, slots: String(slots), slotsNum: slots,
-      showMobileBar: (this.props.showMobileCta !== false) && st.narrow && st.pastHero,
-      mobileBarSpace: (this.props.showMobileCta !== false) && st.narrow && st.pastHero ? '78px' : '0px'
+      showMobileBar: false,
+      mobileBarSpace: '0px'
     };
   }
 }
