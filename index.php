@@ -1044,15 +1044,16 @@ class Component extends DCLogic {
       });
     }
 
-    // Auto-scroll mobile carousels (<= 768px)
+    // Auto-scroll mobile carousels (<= 768px) ONLY when section is visible in viewport
     const setupAutoScroll = (selector, interval) => {
       const el = root.querySelector(selector);
       if (!el) return () => {};
       let timer = null;
       let isInteracting = false;
+      let isInView = false;
 
       const step = () => {
-        if (isInteracting || window.innerWidth > 768) return;
+        if (isInteracting || !isInView || window.innerWidth > 768) return;
         const firstCard = el.querySelector('figure, article, a, div');
         if (!firstCard) return;
         const cardW = firstCard.offsetWidth + 14;
@@ -1066,12 +1067,18 @@ class Component extends DCLogic {
 
       const start = () => {
         if (timer) clearInterval(timer);
-        timer = setInterval(step, interval);
+        if (isInView && !isInteracting && window.innerWidth <= 768) {
+          timer = setInterval(step, interval);
+        }
+      };
+
+      const stop = () => {
+        if (timer) { clearInterval(timer); timer = null; }
       };
 
       const pause = () => {
         isInteracting = true;
-        if (timer) clearInterval(timer);
+        stop();
       };
 
       const resume = () => {
@@ -1084,8 +1091,29 @@ class Component extends DCLogic {
       el.addEventListener('mouseenter', pause);
       el.addEventListener('mouseleave', resume);
 
-      start();
-      return () => { if (timer) clearInterval(timer); };
+      // Start scrolling ONLY when section is visible in viewport
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            isInView = true;
+            setTimeout(() => {
+              if (isInView && !isInteracting) {
+                start();
+              }
+            }, 800);
+          } else {
+            isInView = false;
+            stop();
+          }
+        });
+      }, { threshold: 0.15 });
+
+      observer.observe(el.closest('section') || el);
+
+      return () => {
+        stop();
+        observer.disconnect();
+      };
     };
 
     const cleanTestimonials = setupAutoScroll('.testimonials-columns', 3200);
