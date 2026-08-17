@@ -20,6 +20,34 @@
   body { margin: 0; background: #FAF7F2; color: #1E1B17; -webkit-font-smoothing: antialiased; }
   a { color: #B5794A; }
   a:hover { color: #8A5A34; }
+  @media (max-width: 768px) {
+    .about-stats-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 18px 14px !important;
+      padding: 18px 16px !important;
+      border-radius: 16px !important;
+      margin-top: 32px !important;
+    }
+    .about-stat-card {
+      border-left: none !important;
+      padding-left: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 5px !important;
+    }
+    .about-stat-card .stat-num {
+      font-size: 28px !important;
+      line-height: 1 !important;
+    }
+    .about-stat-card .stat-title {
+      font-size: 13.5px !important;
+      line-height: 1.25 !important;
+    }
+    .about-stat-card .stat-desc {
+      font-size: 12px !important;
+      line-height: 1.45 !important;
+    }
+  }
 </style>
 </helmet>
 
@@ -53,26 +81,26 @@
       </div>
 
       <!-- HIGHLIGHT STATS BAR -->
-      <div data-reveal="" style="margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:16px;background:#FFFDFA;border:1px solid #E2D9C9;border-radius:20px;padding:clamp(24px,3vw,36px)">
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#B5794A">500+</span>
-          <span style="font-size:14.5px;font-weight:600;color:#1E1B17">Students taught live</span>
-          <span style="font-size:13px;color:rgba(30,27,23,0.55)">Interactive batches across Zoom</span>
+      <div class="about-stats-grid" data-reveal="" style="margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:16px;background:#FFFDFA;border:1px solid #E2D9C9;border-radius:20px;padding:clamp(24px,3vw,36px)">
+        <div class="about-stat-card" style="display:flex;flex-direction:column;gap:6px">
+          <span class="stat-num" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#B5794A">500+</span>
+          <span class="stat-title" style="font-size:14.5px;font-weight:600;color:#1E1B17">Students taught live</span>
+          <span class="stat-desc" style="font-size:13px;color:rgba(30,27,23,0.55)">Interactive batches across Zoom</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,24px)">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#B5794A">6+ Years</span>
-          <span style="font-size:14.5px;font-weight:600;color:#1E1B17">In affiliate & search</span>
-          <span style="font-size:13px;color:rgba(30,27,23,0.55)">Testing algorithms & intent</span>
+        <div class="about-stat-card" style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,24px)">
+          <span class="stat-num" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#B5794A">6+ Years</span>
+          <span class="stat-title" style="font-size:14.5px;font-weight:600;color:#1E1B17">In affiliate & search</span>
+          <span class="stat-desc" style="font-size:13px;color:rgba(30,27,23,0.55)">Testing algorithms & intent</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,24px)">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#B5794A">4.9 ★</span>
-          <span style="font-size:14.5px;font-weight:600;color:#1E1B17">Verified student rating</span>
-          <span style="font-size:13px;color:rgba(30,27,23,0.55)">From 140+ documented reviews</span>
+        <div class="about-stat-card" style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,24px)">
+          <span class="stat-num" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#B5794A">4.9 ★</span>
+          <span class="stat-title" style="font-size:14.5px;font-weight:600;color:#1E1B17">Verified student rating</span>
+          <span class="stat-desc" style="font-size:13px;color:rgba(30,27,23,0.55)">From 140+ documented reviews</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,24px)">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#4C7A5E">Zero</span>
-          <span style="font-size:14.5px;font-weight:600;color:#1E1B17">Fake revenue promises</span>
-          <span style="font-size:13px;color:rgba(30,27,23,0.55)">Only repeatable, honest systems</span>
+        <div class="about-stat-card" style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,24px)">
+          <span class="stat-num" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1;color:#4C7A5E">Zero</span>
+          <span class="stat-title" style="font-size:14.5px;font-weight:600;color:#1E1B17">Fake revenue promises</span>
+          <span class="stat-desc" style="font-size:13px;color:rgba(30,27,23,0.55)">Only repeatable, honest systems</span>
         </div>
       </div>
     </div>
