@@ -159,7 +159,49 @@
       text-align: left !important;
     }
     .testimonials-columns {
-      columns: 1 !important;
+      columns: auto !important;
+      display: flex !important;
+      flex-direction: row !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scroll-snap-type: x mandatory !important;
+      -webkit-overflow-scrolling: touch !important;
+      gap: 14px !important;
+      padding: 6px 20px 24px !important;
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+      margin-top: 20px !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    .testimonials-columns::-webkit-scrollbar {
+      display: none !important;
+    }
+    .testimonials-columns figure,
+    .testimonials-columns > a {
+      flex: 0 0 85vw !important;
+      max-width: 320px !important;
+      min-width: 260px !important;
+      scroll-snap-align: center !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+    .testimonials-columns > a {
+      justify-content: center !important;
+    }
+    .mobile-swipe-hint {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      color: #8A5A34 !important;
+      margin-top: 10px !important;
     }
     .final-cta-grid {
       grid-template-columns: 1fr !important;
@@ -585,6 +627,7 @@
           </div>
         </div>
       </div>
+      <div class="mobile-swipe-hint" style="display:none">Swipe reviews →</div>
 
       <div class="testimonials-columns" style="margin-top:clamp(26px,3.4vw,44px);columns:3 300px;column-gap:16px">
         <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="8">
