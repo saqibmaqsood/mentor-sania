@@ -165,6 +165,7 @@
       overflow-x: auto !important;
       overflow-y: hidden !important;
       scroll-snap-type: x mandatory !important;
+      scroll-behavior: smooth !important;
       -webkit-overflow-scrolling: touch !important;
       gap: 14px !important;
       padding: 6px 20px 24px !important;
@@ -980,13 +981,63 @@ class Component extends DCLogic {
     }, { threshold: 0.4 });
     root.querySelectorAll('[data-count],[data-bar]').forEach(el => this._io.observe(el));
 
-    if (!hoverable) return;
-    root.querySelectorAll('[data-tilt]').forEach(card => {
-      const base = getComputedStyle(card).borderColor;
-      card.style.transition = 'border-color 220ms ease';
-      card.addEventListener('mouseenter', () => { card.style.borderColor = 'rgba(181,121,74,0.5)'; });
-      card.addEventListener('mouseleave', () => { card.style.borderColor = base; });
-    });
+    if (hoverable) {
+      root.querySelectorAll('[data-tilt]').forEach(card => {
+        const base = getComputedStyle(card).borderColor;
+        card.style.transition = 'border-color 220ms ease';
+        card.addEventListener('mouseenter', () => { card.style.borderColor = 'rgba(181,121,74,0.5)'; });
+        card.addEventListener('mouseleave', () => { card.style.borderColor = base; });
+      });
+    }
+
+    // Auto-scroll testimonials carousel on mobile (<= 768px)
+    const tCol = root.querySelector('.testimonials-columns');
+    if (tCol) {
+      let autoTimer = null;
+      let isInteracting = false;
+
+      const stepTestimonials = () => {
+        if (isInteracting || window.innerWidth > 768) return;
+        const firstCard = tCol.querySelector('figure, a');
+        if (!firstCard) return;
+        const cardW = firstCard.offsetWidth + 14;
+        const maxScroll = tCol.scrollWidth - tCol.clientWidth;
+        if (tCol.scrollLeft >= maxScroll - 20) {
+          tCol.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          tCol.scrollBy({ left: cardW, behavior: 'smooth' });
+        }
+      };
+
+      const startAuto = () => {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = setInterval(stepTestimonials, 3200);
+      };
+
+      const pauseAuto = () => {
+        isInteracting = true;
+        if (autoTimer) clearInterval(autoTimer);
+      };
+
+      const resumeAuto = () => {
+        isInteracting = false;
+        startAuto();
+      };
+
+      tCol.addEventListener('touchstart', pauseAuto, { passive: true });
+      tCol.addEventListener('touchend', () => setTimeout(resumeAuto, 2400), { passive: true });
+      tCol.addEventListener('mouseenter', pauseAuto);
+      tCol.addEventListener('mouseleave', resumeAuto);
+
+      startAuto();
+      this._cleanTestimonials = () => {
+        if (autoTimer) clearInterval(autoTimer);
+      };
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._cleanTestimonials) this._cleanTestimonials();
   }
 
   renderVals() {
