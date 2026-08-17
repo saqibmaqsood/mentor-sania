@@ -23,18 +23,24 @@
   @media (max-width: 768px) {
     .filter-pills-wrap {
       display: flex !important;
-      flex-wrap: wrap !important;
-      gap: 7px 6px !important;
-      padding: 10px 16px !important;
-      overflow-x: visible !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      gap: 8px !important;
+      padding: 12px 16px !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    .filter-pills-wrap::-webkit-scrollbar {
+      display: none !important;
     }
     .filter-pill-btn {
       flex: 0 0 auto !important;
-      padding: 7px 13px !important;
-      font-size: 12px !important;
-      min-height: 32px !important;
+      padding: 8px 16px !important;
+      font-size: 13px !important;
+      min-height: 36px !important;
       border-radius: 999px !important;
-      line-height: 1.2 !important;
+      white-space: nowrap !important;
     }
     .featured-post-content {
       padding: 22px 20px 24px !important;
