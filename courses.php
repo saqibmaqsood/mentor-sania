@@ -21,6 +21,23 @@
   a:hover { color: #8A5A34; }
   .om-scroller { scrollbar-width: none; }
   .om-scroller::-webkit-scrollbar { display: none; }
+  @media (max-width: 768px) {
+    .filter-pills-wrap {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 7px 6px !important;
+      padding: 10px 16px !important;
+      overflow-x: visible !important;
+    }
+    .filter-pill-btn {
+      flex: 0 0 auto !important;
+      padding: 7px 13px !important;
+      font-size: 12px !important;
+      min-height: 32px !important;
+      border-radius: 999px !important;
+      line-height: 1.2 !important;
+    }
+  }
 </style>
 </helmet>
 
@@ -38,9 +55,9 @@
   </header>
 
   <div style="position:sticky;top:74px;z-index:600;background:rgba(250,247,242,0.94);backdrop-filter:saturate(180%) blur(12px);border-top:1px solid #E2D9C9;border-bottom:1px solid #E2D9C9">
-    <div class="om-scroller" style="max-width:1360px;margin:0 auto;padding:14px clamp(20px,5vw,64px);display:flex;gap:9px;overflow-x:auto">
+    <div class="om-scroller filter-pills-wrap" style="max-width:1360px;margin:0 auto;padding:14px clamp(20px,5vw,64px);display:flex;gap:9px;overflow-x:auto">
       <sc-for list="{{ filters }}" as="fl" hint-placeholder-count="6">
-        <button type="button" onClick="{{ fl.pick }}" style="flex:0 0 auto;font-family:inherit;font-size:13.5px;font-weight:600;letter-spacing:0.02em;color:{{ fl.color }};background:{{ fl.bg }};border:1px solid {{ fl.border }};border-radius:999px;padding:10px 18px;min-height:40px;cursor:pointer;white-space:nowrap;transition:background 180ms ease,border-color 180ms ease,color 180ms ease">{{ fl.label }}</button>
+        <button class="filter-pill-btn" type="button" onClick="{{ fl.pick }}" style="flex:0 0 auto;font-family:inherit;font-size:13.5px;font-weight:600;letter-spacing:0.02em;color:{{ fl.color }};background:{{ fl.bg }};border:1px solid {{ fl.border }};border-radius:999px;padding:10px 18px;min-height:40px;cursor:pointer;white-space:nowrap;transition:background 180ms ease,border-color 180ms ease,color 180ms ease">{{ fl.label }}</button>
       </sc-for>
     </div>
   </div>
