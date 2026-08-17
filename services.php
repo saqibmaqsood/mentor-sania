@@ -60,6 +60,34 @@
     transition: border-color 180ms ease;
   }
   .form-select:focus { border-color: #B5794A; }
+  @media (max-width: 768px) {
+    .services-promises-grid {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 18px 14px !important;
+      padding: 18px 16px !important;
+      border-radius: 16px !important;
+      margin-top: 32px !important;
+    }
+    .promise-card {
+      border-left: none !important;
+      padding-left: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 5px !important;
+    }
+    .promise-card .promise-num {
+      font-size: 26px !important;
+      line-height: 1 !important;
+    }
+    .promise-card .promise-title {
+      font-size: 13.5px !important;
+      line-height: 1.25 !important;
+    }
+    .promise-card .promise-desc {
+      font-size: 12px !important;
+      line-height: 1.45 !important;
+    }
+  }
 </style>
 </helmet>
 
@@ -91,26 +119,26 @@
       </div>
 
       <!-- TRUST & EXECUTION PROMISES -->
-      <div data-reveal="" style="margin-top:clamp(44px,5.5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:16px;background:#FFFDFA;border:1px solid #E2D9C9;border-radius:20px;padding:clamp(22px,3vw,34px)">
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#B5794A">01</span>
-          <span style="font-size:15px;font-weight:700;color:#1E1B17">Practitioner-Led Execution</span>
-          <span style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">No junior handoffs or outsourced agency bloat.</span>
+      <div class="services-promises-grid" data-reveal="" style="margin-top:clamp(44px,5.5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:16px;background:#FFFDFA;border:1px solid #E2D9C9;border-radius:20px;padding:clamp(22px,3vw,34px)">
+        <div class="promise-card" style="display:flex;flex-direction:column;gap:6px">
+          <span class="promise-num" style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#B5794A">01</span>
+          <span class="promise-title" style="font-size:15px;font-weight:700;color:#1E1B17">Practitioner-Led Execution</span>
+          <span class="promise-desc" style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">No junior handoffs or outsourced agency bloat.</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,20px)">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#B5794A">02</span>
-          <span style="font-size:15px;font-weight:700;color:#1E1B17">Direct ROI Focus</span>
-          <span style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">Built for speed, conversion rate, and real business revenue.</span>
+        <div class="promise-card" style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,20px)">
+          <span class="promise-num" style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#B5794A">02</span>
+          <span class="promise-title" style="font-size:15px;font-weight:700;color:#1E1B17">Direct ROI Focus</span>
+          <span class="promise-desc" style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">Built for speed, conversion rate, and real business revenue.</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,20px)">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#B5794A">03</span>
-          <span style="font-size:15px;font-weight:700;color:#1E1B17">Clean Handover</span>
-          <span style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">Full source code, clean assets, and video training included.</span>
+        <div class="promise-card" style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,20px)">
+          <span class="promise-num" style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#B5794A">03</span>
+          <span class="promise-title" style="font-size:15px;font-weight:700;color:#1E1B17">Clean Handover</span>
+          <span class="promise-desc" style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">Full source code, clean assets, and video training included.</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,20px)">
-          <span style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#4C7A5E">04</span>
-          <span style="font-size:15px;font-weight:700;color:#1E1B17">Transparent Scopes</span>
-          <span style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">Fixed project deliverables with zero hidden surprise costs.</span>
+        <div class="promise-card" style="display:flex;flex-direction:column;gap:6px;border-left:1px solid #EDE4D3;padding-left:clamp(0px,2vw,20px)">
+          <span class="promise-num" style="font-family:'Newsreader',Georgia,serif;font-size:32px;line-height:1;color:#4C7A5E">04</span>
+          <span class="promise-title" style="font-size:15px;font-weight:700;color:#1E1B17">Transparent Scopes</span>
+          <span class="promise-desc" style="font-size:13.5px;line-height:1.5;color:rgba(30,27,23,0.58)">Fixed project deliverables with zero hidden surprise costs.</span>
         </div>
       </div>
     </div>
